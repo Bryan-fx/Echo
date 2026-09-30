@@ -1,7 +1,7 @@
 # Echo
 # 🧠 Minecraft Memory
 
-**Minecraft Memory is an intelligent, lightweight server history and forensics plugin that lets your Minecraft server remember what happened.**
+**Echo is an intelligent, lightweight server history and forensics plugin that lets your Minecraft server remember what happened.**
 
 Instead of endlessly storing massive amounts of raw data, Memory intelligently prioritizes important events, compresses repetitive activity, and automatically removes outdated information.
 
