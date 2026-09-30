@@ -1,5 +1,4 @@
-# Echo Memory
-# 🧠 Minecraft Memory
+# 🧠 Echo
 
 **Echo is an intelligent, MediumWeight server history and forensics plugin that lets your Minecraft server remember what happened.**
 
