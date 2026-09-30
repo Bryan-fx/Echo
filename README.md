@@ -19,9 +19,9 @@ Quickly investigate questions like:
 
 ### ⚡ Built for Performance
 
-Memory is designed with large servers in mind.
+Echo is designed with large servers in mind.
 
-* Lightweight event tracking
+* Medium Weight event tracking
 * SQLite support out of the box
 * MySQL/MariaDB support for larger servers
 * Configurable data retention
