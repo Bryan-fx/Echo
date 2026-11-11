@@ -67,7 +67,7 @@ Memory separates events into different importance levels.
 ### 🛠️ Example
 
 ```text
-/memory search diamonds
+/Echo search diamonds
 ```
 
 > 💎 **Diamond activity found**
