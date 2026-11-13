@@ -1,0 +1,69 @@
+# Echo configuration
+
+database:
+  type: sqlite            # sqlite or mysql
+  sqlite:
+    file: echo.db         # created inside the plugin folder
+  mysql:                  # only used when type is mysql
+    host: localhost
+    port: 3306
+    name: echo
+    user: root
+    password: ""
+    pool-size: 10
+
+# How long to keep each importance level (in days). Use -1 to keep forever.
+retention:
+  critical-days: 90
+  normal-days: 14
+  cleanup-interval-minutes: 60
+
+# Combine repeated actions into one summary entry
+aggregation:
+  enabled: true
+  window-seconds: 180       # events within this window are merged
+  max-distance-blocks: 16   # events must be this close to be merged
+  flush-interval-seconds: 10
+
+# What gets recorded, by importance level
+tracking:
+  critical:
+    container-transactions: true
+    valuable-item-transfers: true
+    player-deaths: true
+    economy-transactions: true
+    admin-actions: true
+  normal:
+    block-place: true
+    block-break: true
+    crafting: true
+    interactions: true
+  ignored:
+    movement: true          # never recorded
+    looking: true
+
+# Items that count as "valuable" for critical tracking
+valuable-items:
+  - DIAMOND
+  - DIAMOND_BLOCK
+  - NETHERITE_INGOT
+  - NETHERITE_BLOCK
+  - ELYTRA
+  - ENCHANTED_GOLDEN_APPLE
+  - TOTEM_OF_UNDYING
+  - BEACON
+
+# Blocks that are too common to track one by one (counted in aggregation instead)
+ignored-blocks:
+  - DIRT
+  - GRASS_BLOCK
+  - STONE
+  - COBBLESTONE
+
+# Worlds Echo should not record at all
+ignored-worlds: []
+
+# Search command settings
+search:
+  max-results: 20
+  default-radius: 10

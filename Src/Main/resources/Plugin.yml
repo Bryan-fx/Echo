@@ -1,0 +1,16 @@
+name: Echo
+version: ${project.version}
+main: me.bryanfx.echo.EchoPlugin
+api-version: '26.2'
+author: Bryan-fx
+description: Intelligent server history and forensics.
+commands:
+  echo:
+    description: Search your server's history.
+    usage: /echo search <query>
+    aliases: [memory]
+    permission: echo.use
+permissions:
+  echo.use:
+    description: Use Echo search commands.
+    default: op
