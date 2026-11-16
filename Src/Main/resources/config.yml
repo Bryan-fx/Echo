@@ -1,10 +1,10 @@
 # Echo configuration
 
 database:
-  type: sqlite            # sqlite or mysql
+  type: sqlite            # sqlite (mysql is reserved for a future backend)
   sqlite:
     file: echo.db         # created inside the plugin folder
-  mysql:                  # only used when type is mysql
+  mysql:                  # reserved for the future MySQL/MariaDB backend
     host: localhost
     port: 3306
     name: echo

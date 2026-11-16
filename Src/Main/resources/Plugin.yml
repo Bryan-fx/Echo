@@ -1,6 +1,6 @@
 name: Echo
 version: ${project.version}
-main: me.bryanfx.echo.EchoPlugin
+main: com.Bryanfx.Echo.EchoPlugin
 api-version: '26.2'
 author: Bryan-fx
 description: Intelligent server history and forensics.

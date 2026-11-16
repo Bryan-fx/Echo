@@ -35,13 +35,13 @@ Instead of storing thousands of identical events:
 > Bryan broke stone
 > Bryan broke stone
 
-Memory can summarize them as:
+Echo can summarize them as:
 
 > **Bryan mined 47 stone blocks in this area over 3 minutes.**
 
 ### 🧠 Intelligent History
 
-Memory separates events into different importance levels.
+Echo separates events into different importance levels.
 
 **Critical**
 
@@ -81,3 +81,21 @@ Memory separates events into different importance levels.
 Minecraft doesn't just log your server anymore.
 
 **It remembers it.**
+
+## Current implementation
+
+The current build is a Paper plugin written in Java. It records block placement,
+block destruction, and player deaths in SQLite, supports asynchronous
+`/echo search <query>` searches, and removes expired records according to
+`config.yml`. MySQL support, container transaction tracking, economy adapters,
+and aggregation are planned next.
+
+Build the shaded plugin JAR with Maven:
+
+```text
+mvn package
+```
+
+Install the resulting JAR from `target/` into a Paper server's `plugins/`
+directory. Java and Maven projects work directly in VS Code with the Extension
+Pack for Java.
